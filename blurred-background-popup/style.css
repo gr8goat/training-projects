@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    background-color: lightgray;
+}
+
+* {
+    font-family: sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./static/img/background.jpg');
+    background-size: cover;
+    text-align: center;
+}
+
+.container h1 {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    font-size: 60px;
+    padding: 0 20px;
+    letter-spacing: 4px;
+}
+
+.btn {
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 10px;
+    cursor: pointer;
+    background-color: lightgoldenrodyellow;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    font-size: 20px;
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.btn:hover {
+    filter: brightness(0.8);
+    transform: scale(0.98);
+}
+
+.container.active {
+    filter: blur(5px) brightness(0.7);
+}
+
+.popup-container {
+    box-sizing: border-box;
+    width: 400px;
+    height: 200px;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-image: url('./static/img/popup-bg.jpg');
+    background-size: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    transition: opacity 0.7s ease;
+}
+
+.popup-container h4,
+label {
+    font-size: 30px;
+    margin: 0px 10px 0 0px;
+    color: springgreen;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.popup-container label {
+    font-size: inherit;
+    margin: 0;
+}
+
+.popup-btn {
+    background-color: lightgoldenrodyellow;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: filter 0.4s ease, transform 0.4s ease;
+}
+
+.popup-btn:hover {
+    filter: brightness(0.8);
+    transform: scale(0.98);
+}
+
+.input {
+    padding: 10px;
+    border: none;
+    margin: 10px 0;
+    font-size: 20px;
+    text-align: center;
+}
+
+.input::placeholder {
+    color: lightgray;
+}
+
+.close-icon {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.close-icon:hover {
+    color: orangered;
+}
+
+.popup-container.active {
+    visibility: hidden;
+    opacity: 0;
+}
